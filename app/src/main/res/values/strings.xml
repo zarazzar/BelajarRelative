@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BelajarRelative</string>
+
+    <string-array name="arr_kepada">
+    <item>Aku yang tersakiti</item>
+    <item>Diaa Dia Dia</item>
+    <item>Kamu yang Menghantuiku</item>
+    </string-array>
+
 </resources>

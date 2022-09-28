@@ -1,18 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="6dp"
     tools:context=".MainActivity">
 
-    <TextView
+<TextView
+    android:id="@+id/TV_hal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hal : "/>
+
+<TextView
+    android:id="@+id/TV_rahasia"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Rahasia"
+    android:layout_toRightOf="@id/TV_hal"
+    android:textStyle="italic"/>
+
+<TextView
+    android:id="@+id/TV_tanggal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Palembang, 28 September 2022"
+    android:layout_alignParentRight="true" />
+
+<TextView
+    android:id="@+id/TV_kepada"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Kepada :"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/TV_rahasia"
+    android:layout_marginTop="32dp"
+    />
+
+    <Spinner
+        android:id="@+id/sp_kepadaSiapa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/TV_kepada"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/arr_kepada"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_clickhere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Click Here" />
+
+    <CheckBox
+        android:id="@+id/cb_yakin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yakin"
+        layout android:layout_below="@id/btn_clickhere" />
+
+    <CheckBox
+        android:id="@+id/cb_yakinbanget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yakin banget"
+        layout android:layout_below="@id/btn_clickhere"
+        android:layout_toRightOf="@id/cb_yakin"/>
+
+    <CheckBox
+        android:id="@+id/cb_gakyakin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yakin banget"
+        layout android:layout_below="@id/btn_clickhere"
+        android:layout_toRightOf="@id/cb_yakinbanget"/>
+
+    <Button
+        android:id="@+id/btn_keluar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keluar"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
